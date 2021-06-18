@@ -1,6 +1,6 @@
 #include "../HeaderFiles/Eagle.hpp"
 
-Eagle::Eagle(string newname, int newage, bool sex) : Animal(newname, newage, sex) {
+Eagle::Eagle(string newname, int newage, bool sex, string newtype) : Animal(newname, newage, sex, newtype) {
     if (sex == true) {
         cout << "Vous avez un nouvel aigle ! Son nom est " << newname << " et il a " << newage
              << " mois. Prenez soin de lui !" << endl;

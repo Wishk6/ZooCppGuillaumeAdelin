@@ -101,19 +101,22 @@ vector <string> Enclosure::showAnimals(int enclosureNbr) {
     return animalArr;
 }
 
-// void Enclosure::update()
-// {
-//     AnimalIterator it = animalList.begin();
-//     bool isAlive;
-//     while (it != animalList.end())
-//     {
-//         isAlive = (*it)->update();
-//         if (!isAlive)
-//         {
-//             cout << "L'animal " << (*it)->getName() << " situe dans l'enclos "<< e_name << " est mort" << endl;
-//             deleteAnimal((*it)->getName());
-//             it--;
-//         }
-//         it++;
-//     }
-// }
+void Enclosure::update()
+{
+    AnimalIterator it = animalList.begin();
+    bool isAlive;
+    while (it != animalList.end())
+    {
+        isAlive = (*it)->update();
+        if (!isAlive)
+        {
+            cout << "L'animal " << (*it)->getName() << " situe dans l'enclos "<< e_name << " est mort" << endl;
+            deleteSpecificAnimal((*it)->getName(),e_type); // e_type ?
+            it--;
+        } else 
+        {
+            cout << (*it)->getName() << " est vivant" << endl;
+        }
+        it++;
+    }
+}
