@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f7b133f-0e67-4258-8c60-3297547ea932" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/Animal.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/Animal.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/Eagle.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/Eagle.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/Enclosure.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/Enclosure.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/MenuList.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/MenuList.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/Tiger.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/Tiger.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/game.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/game.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/menu.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/menu.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/os.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/os.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/HeaderFiles/zoo.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/HeaderFiles/zoo.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/Animal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/Animal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/Eagle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/Eagle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/Enclosure.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/Enclosure.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/MenuList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/MenuList.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/Tiger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/Tiger.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/Zoo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/Zoo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/init.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/init.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/SourceFiles/os.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/SourceFiles/os.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1u37BbryHK1pabnaWaLIwYjCbLP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f7b133f-0e67-4258-8c60-3297547ea932" name="Default Changelist" comment="" />
+      <created>1623882287962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623882287962</updated>
+      <workItem from="1623882291193" duration="458000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
