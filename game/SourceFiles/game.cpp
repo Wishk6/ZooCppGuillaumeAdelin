@@ -26,7 +26,7 @@ void play() {
     if (remainingMonth == 120) {
         welcome();
     } else {
-        //  Zoo::update();
+        Zoo::update();
         cout << "\nIl reste " << remainingMonth << " mois" << endl;
     }
     menu();

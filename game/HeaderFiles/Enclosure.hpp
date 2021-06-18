@@ -35,7 +35,8 @@ public:
     void deleteAllAnimals(string enclosureName, string type);
 
     vector <string> showAnimals(int enclosureNbr);
-    // void update();
+    
+    void update();
 };
 
 #include "zoo.hpp"

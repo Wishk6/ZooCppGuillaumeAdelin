@@ -48,7 +48,8 @@ public:
 
     static vector <string> getEnclosureList();
 
-    // static void update();
+    static void update();
+
     static void useMeat(double quantity);
 
     static void useSeed(double quantity);

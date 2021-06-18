@@ -195,17 +195,17 @@ Animal *Zoo::createAnimal(string type, string name, bool sex)
     Animal *animal = NULL;
     if (type == "Tiger")
     {
-        animal = new Tiger(name, 6, sex);
+        animal = new Tiger(name, 6, sex,type);
         money -= 3000;
     }
     if (type == "Eagle")
     {
-        animal = new Eagle(name, 6, sex);
+        animal = new Eagle(name, 6, sex, type);
         money -= 1000;
     }
     if (type == "Chicken")
     {
-        animal = new Chicken(name, 6, sex);
+        animal = new Chicken(name, 6, sex, type);
         money -= 20;
     }
     return animal;
@@ -215,26 +215,28 @@ vector<string> Zoo::getEnclosureList()
 {
     EnclosureIterator it = my_EnclosList.begin();
     vector<string> enclosureList;
+
     while (it != my_EnclosList.end())
     {
         string enclosureName = (*it)->getName();
-        it++;
         enclosureList.push_back(enclosureName);
+        it++;
     }
     return enclosureList;
 }
 
-// void Zoo::update()
-// {
 
-//     EnclosureIterator it = my_EnclosList.begin();
+void Zoo::update()
+{
 
-//     while (it != my_EnclosList.end())
-//     {
-//         (*it)->update();
-//         it++;
-//     }
-// }
+    EnclosureIterator it = my_EnclosList.begin();
+
+    while (it != my_EnclosList.end())
+    {
+        (*it)->update();
+        it++;
+    }
+}
 
 void Zoo::useMeat(double quantity)
 {

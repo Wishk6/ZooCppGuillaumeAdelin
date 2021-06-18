@@ -148,19 +148,43 @@ void choseAnimalSex(string type)
 
 void choseAnimalEnclosure(string type, bool sex)
 {
+
     sizeList = List->choseEnclosureBuy();
     enclosureList = Zoo::getEnclosureList();
     string enclosureName;
     input = getInput(sizeList);
+
+    vector<Enclosure *> enclosureListObj = Zoo::getEnclosurelistForIt();
+    EnclosureIterator it = enclosureListObj.begin();
+    string enclosureType;
+     
     if (input < sizeList)
     {
         enclosureName = enclosureList.at(input - 1);
+       
+        while (it != enclosureListObj.end()) // return list of animals
+        {
+        if ((*it)->getName() == enclosureName)
+        {
+            enclosureType = (*it)->getType();
+        }
+        it++;
+        }
     }
-    else
+     else
     {
         choseAnimalSex(type);
         return;
+    }    
+   
+     
+
+    if (enclosureType != type ) {
+        cout << red << "Cet enclos ne peut pas accueillir un animal de ce type. " << white << endl;
+        return;
     }
+   
+ Zoo::getEnclosurelistForIt();
     cout << "Donnez lui un nom:\n";
     string name;
     cin >> name;
@@ -171,7 +195,7 @@ void choseAnimalEnclosure(string type, bool sex)
 void choseEnclosureToSellAnimal()
 {
     sizeList = List->choseEnclosureToSellAnimal();
-    enclosureList = Zoo::getEnclosureList(); // pour afficher un vec<string>
+    enclosureList = Zoo::getEnclosureList(); //  affiche un vec<string>
     vector<Enclosure *> enclosureIterator;
     string enclosureName;
 
@@ -211,19 +235,21 @@ void sellAnimalMenu(string enclosureName)
         it++;
     }
 
-    for (size_t i = 0; i < my_animalList.size(); i++) // print list
+    for (size_t i = 0; i < my_animalList.size(); i++) // print la list
     {
         std::cout << "  " << count << "-" << my_animalList[i] << std::endl;
         count++;
     }
     cout << "  " << count << "-Retour" << endl;
+
     size_t animalNbr;
     cin >> animalNbr;
+
     if (animalNbr > my_animalList.size() + 1)
     {
-        cout << "Ce chiffre ne correspond a aucun animal" << endl;
+        cout << red << "Ce chiffre ne correspond a aucun animal" << white << endl;
     }
-    if (animalNbr == my_animalList.size() + 1) // gere le retour
+    if (animalNbr == my_animalList.size() + 1) // gere le -Retour
     {
         choseEnclosureToSellAnimal();
     }

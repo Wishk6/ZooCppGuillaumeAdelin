@@ -9,7 +9,7 @@ using namespace std;
 class Eagle : public Animal {
 
 public:
-    Eagle(string newname, int newage, bool sex);
+    Eagle(string newname, int newage, bool sex, string newtype);
 };
 
 #endif

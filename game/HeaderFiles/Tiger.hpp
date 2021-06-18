@@ -8,7 +8,7 @@
 class Tiger : public Animal {
 
 public:
-    Tiger(string newname, int newage, bool sex);
+    Tiger(string newname, int newage, bool sex, string type);
 };
 
 #endif

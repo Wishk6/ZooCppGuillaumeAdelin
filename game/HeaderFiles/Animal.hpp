@@ -10,9 +10,11 @@ using namespace std;
 class Animal {
 private:
     string name;
-    string type;
     int age;
     bool isMale;
+    string type;
+    
+    
     bool isHungry;
     bool isSeek;
     bool isPregnant;
@@ -21,7 +23,8 @@ private:
 public:
     string getName();
 
-    Animal(string newname, int newage, bool sex);
+    Animal(string newname, int newage, bool sex, string newtype);
+    bool update();
 };
 
 #endif
