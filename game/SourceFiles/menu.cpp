@@ -181,6 +181,7 @@ void choseAnimalEnclosure(string type, bool sex)
 
     if (enclosureType != type ) {
         cout << red << "Cet enclos ne peut pas accueillir un animal de ce type. " << white << endl;
+        choseAnimalSex(type);
         return;
     }
    
@@ -234,6 +235,8 @@ void sellAnimalMenu(string enclosureName)
         }
         it++;
     }
+
+/////////////////////////////
 
     for (size_t i = 0; i < my_animalList.size(); i++) // print la list
     {

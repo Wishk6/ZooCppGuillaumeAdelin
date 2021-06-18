@@ -11,11 +11,6 @@ Zoo::Zoo()
 {
 }
 
-void Zoo::updateMoney(int profit)
-{
-    money += profit;
-}
-
 vector<Enclosure *> Zoo::getEnclosurelistForIt()
 {
     return my_EnclosList;
@@ -47,6 +42,7 @@ void Zoo::init()
     buyAnimal("EnclosPoulet1", "Chicken", "ChickenFemale7", false);
     buyAnimal("EnclosPoulet1", "Chicken", "ChickenFemale8", false);
     buyAnimal("EnclosPoulet1", "Chicken", "ChickenFemale9", false);
+    buyAnimal("EnclosPoulet1", "Chicken", "ChickenFemale10", false);
     buyAnimal("EnclosPoulet1", "Chicken", "ChickenMale1", true);
     money = 80000;
     meat = 10000;
@@ -174,22 +170,6 @@ void Zoo::sellAnimal(string enclosureName, string name)
     }
 }
 
-void Zoo::buyMeat(double quantity)
-{
-    meat += quantity;
-    money -= quantity * 5;
-    cout << "\nVous avez achete " << quantity << "kg de viande\n"
-         << endl;
-}
-
-void Zoo::buySeed(double quantity)
-{
-    seed += quantity;
-    money -= quantity * 2.5;
-    cout << "\nVous avez achete " << quantity << "kg de graine\n"
-         << endl;
-}
-
 Animal *Zoo::createAnimal(string type, string name, bool sex)
 {
     Animal *animal = NULL;
@@ -225,7 +205,6 @@ vector<string> Zoo::getEnclosureList()
     return enclosureList;
 }
 
-
 void Zoo::update()
 {
 
@@ -238,12 +217,59 @@ void Zoo::update()
     }
 }
 
-void Zoo::useMeat(double quantity)
+double Zoo::getMoney()
 {
-    meat -= quantity;
+    return money;
+}
+void Zoo::updateMoney(int profit)
+{
+    money += profit;
 }
 
-void Zoo::useSeed(double quantity)
+void Zoo::buyMeat(double quantity)
 {
-    seed -= quantity;
+    meat += quantity;
+    money -= quantity * 5;
+    cout << "\nVous avez achete " << quantity << "kg de viande\n"
+         << endl;
+}
+
+void Zoo::buySeed(double quantity)
+{
+    seed += quantity;
+    money -= quantity * 2.5;
+    cout << "\nVous avez achete " << quantity << "kg de graine\n"
+         << endl;
+}
+
+bool Zoo::useMeat(double quantity)
+{
+    bool hungry;
+
+    if (meat >= quantity)
+    {
+        meat -= quantity;
+        hungry = false;
+    }
+    else
+    {
+        hungry = true;
+    }
+    return hungry;
+}
+
+bool Zoo::useSeed(double quantity) // tchek si on a assez de nourriture dans le zoo
+{
+    bool hungry;
+    
+    if (seed >= quantity)
+    {
+        seed -= quantity;
+        hungry = false;
+    }
+    else
+    {
+        hungry = true;
+    }
+    return hungry;
 }

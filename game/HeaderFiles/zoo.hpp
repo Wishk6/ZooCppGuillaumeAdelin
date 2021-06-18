@@ -15,7 +15,8 @@
 typedef vector<Enclosure *> EnclosureList;
 typedef EnclosureList::iterator EnclosureIterator;
 
-class Zoo {
+class Zoo
+{
     static double meat;
     static double seed;
     static double money;
@@ -25,8 +26,6 @@ public:
     Zoo();
 
     static void init();
-
-    static void updateMoney(int profit);
 
     static vector<Enclosure *> getEnclosurelistForIt();
 
@@ -40,19 +39,23 @@ public:
 
     static void sellAnimal(string Enclosurename, string name);
 
+    static Animal *createAnimal(string type, string name, bool sex);
+
+    static vector<string> getEnclosureList();
+
+    static void update();
+
+    static double getMoney();
+
+    static void updateMoney(int profit);
+    
     static void buyMeat(double quantity);
 
     static void buySeed(double quantity);
 
-    static Animal *createAnimal(string type, string name, bool sex);
+    static bool useMeat(double quantity);
 
-    static vector <string> getEnclosureList();
-
-    static void update();
-
-    static void useMeat(double quantity);
-
-    static void useSeed(double quantity);
+    static bool useSeed(double quantity);
 };
 
 #endif // ZOO_H
