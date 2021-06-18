@@ -22,9 +22,10 @@ private:
 
 public:
     string getName();
-
+    string getType();
+    bool getSex();
     Animal(string newname, int newage, bool sex, string newtype);
-    bool update();
+    void setHungry(bool hungry);
 };
 
 #endif

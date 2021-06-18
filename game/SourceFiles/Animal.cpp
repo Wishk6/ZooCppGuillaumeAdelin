@@ -1,18 +1,25 @@
 #include "../HeaderFiles/Animal.hpp"
 
-Animal::Animal(string newname, int newage, bool sex, string newtype) : name(newname), age(newage), isMale(sex), type(newtype) {
-
+Animal::Animal(string newname, int newage, bool sex, string newtype) : name(newname), age(newage), isMale(sex), type(newtype)
+{
 }
 
-string Animal::getName() {
+string Animal::getName()
+{
     return name;
 }
 
-bool Animal::update() {
+string Animal::getType()
+{
+return type;
+}
 
-int death = rand() % 100 + 1;
-cout << death << endl;
-age+=1;
-cout << age << endl;
-return true;
+bool Animal::getSex()
+{
+return isMale;
+
+}
+void Animal::setHungry(bool hungry)
+{
+isHungry = hungry;
 }

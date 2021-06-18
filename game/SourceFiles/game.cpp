@@ -19,6 +19,7 @@ void updateGame() {
         day = 1;
         remainingMonth--;
     }
+    cout << yellow << "GG !! You won the game with " << Zoo::getMoney() << "$ !\n" << white << endl;
 };
 
 void play() {
@@ -27,7 +28,11 @@ void play() {
         welcome();
     } else {
         Zoo::update();
-        cout << "\nIl reste " << remainingMonth << " mois" << endl;
+        cout  << blue << "\nIl reste " << remainingMonth << " mois" << blue << endl;
+    }
+     if (Zoo::getMoney() <= 0) {
+        cout << red <<  "Money = " << Zoo::getMoney() << ", you don't have enough money to continue. Retry ! " << white << endl;
+        exit;
     }
     menu();
 }
