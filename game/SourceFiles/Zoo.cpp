@@ -115,7 +115,7 @@ void Zoo::sellEnclosure(string name)
                 price = 50;
                 money += price;
             }
-            (*it)->deleteAllAnimals(name, (*it)->getType()); //delete all anim
+            (*it)->deleteAllAnimals((*it)->getType()); //delete all anim
 
             cout << (*it)->getName() << " vendu avec succes pour " << price << " $ !\n " << endl;
 
@@ -175,7 +175,7 @@ Animal *Zoo::createAnimal(string type, string name, bool sex)
     Animal *animal = NULL;
     if (type == "Tiger")
     {
-        animal = new Tiger(name, 6, sex,type);
+        animal = new Tiger(name, 6, sex, type);
         money -= 3000;
     }
     if (type == "Eagle")
@@ -214,6 +214,22 @@ void Zoo::update()
     {
         (*it)->update();
         it++;
+    }
+    if (rand() % 100 == 0)
+    {
+        fire();
+    }
+    if (rand() % 100 == 0)
+    {
+        steal();
+    }
+    if (rand() % 100 < 20)
+    {
+        spoiledSeed();
+    }
+    if (rand() % 100 < 10)
+    {
+        rottenMeat();
     }
 }
 
@@ -261,7 +277,7 @@ bool Zoo::useMeat(double quantity)
 bool Zoo::useSeed(double quantity) // tchek si on a assez de nourriture dans le zoo
 {
     bool hungry;
-    
+
     if (seed >= quantity)
     {
         seed -= quantity;
@@ -272,4 +288,56 @@ bool Zoo::useSeed(double quantity) // tchek si on a assez de nourriture dans le 
         hungry = true;
     }
     return hungry;
+}
+
+void Zoo::fire()
+{
+
+    int index = rand() % my_EnclosList.size();
+    int i = 0;
+    EnclosureIterator it = my_EnclosList.begin();
+    while (it != my_EnclosList.end())
+    {
+        if (i == index)
+        {
+            cout << red << "Il y eu un incendie le mois dernier, vous avez perdu l'enclos " << (*it)->getName() << " et tous les animaux a l'interieur de cet enclos ont peri dans l'incendie!"<< white << endl;
+            my_EnclosList.erase(it);
+            delete (*it);
+            it--;
+        }
+        i++;
+        it++;
+    }
+}
+
+void Zoo::steal()
+{
+    int index = rand() % my_EnclosList.size();
+    int i = 0;
+    EnclosureIterator it = my_EnclosList.begin();
+    while (it != my_EnclosList.end())
+    {
+        if (i == index)
+        {
+
+            (*it)->getStealAnimal();
+        }
+        i++;
+        it++;
+    }
+}
+
+void Zoo::spoiledSeed()
+{
+    cout << red << "Une partie des graines ont moisi, vous avez perdu " << 0.1 * seed << " kg de graines." << white << endl;
+
+
+    seed -= 0.1 * seed;
+}
+
+void Zoo::rottenMeat()
+{
+    cout << red << "Une partie de la viande est avarie, vous avez perdu " << 0.2 * meat << " kg de viande." << white << endl;;
+
+    meat -= 0.2 * meat;
 }

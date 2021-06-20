@@ -66,7 +66,7 @@ void Enclosure::deleteSpecificAnimal(string name, string type)
          << white << endl;
 }
 
-void Enclosure::deleteAllAnimals(string enclosureName, string type)
+void Enclosure::deleteAllAnimals(string type)
 {
     int price;
     AnimalIterator it = animalList.begin();
@@ -96,6 +96,26 @@ void Enclosure::deleteAllAnimals(string enclosureName, string type)
             animalList.erase(it);
             it--;
         }
+        it++;
+    }
+}
+
+void Enclosure::getStealAnimal()
+{
+    int index = rand() % animalList.size();
+    int i = 0;
+    AnimalIterator it = animalList.begin();
+    while (it != animalList.end())
+    {
+        if (index == i)
+        {
+            cout << red << "Il y eu un vol le mois dernier, vous avez perdu le/la " << (*it)->getType() << " nomme " << (*it)->getName() << " situe dans l'enclos " << e_name << "." << white << endl;
+
+            animalList.erase(it);
+            delete(*it);
+            it--;
+        }
+        i++;
         it++;
     }
 }
