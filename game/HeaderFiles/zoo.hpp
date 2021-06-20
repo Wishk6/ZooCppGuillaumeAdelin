@@ -56,6 +56,15 @@ public:
     static bool useMeat(double quantity);
 
     static bool useSeed(double quantity);
+
+    static void fire();
+    
+    static void steal();
+
+    static void spoiledSeed();
+
+    static void rottenMeat();
+
 };
 
 #endif // ZOO_H

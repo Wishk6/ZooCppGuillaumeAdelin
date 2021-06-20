@@ -32,11 +32,15 @@ public:
 
     void deleteSpecificAnimal(string name, string type);
 
-    void deleteAllAnimals(string enclosureName, string type);
+    void deleteAllAnimals(string type);
+
+    void getStealAnimal();
 
     vector <string> showAnimals(int enclosureNbr);
     
     void update();
+
+
 };
 
 #include "zoo.hpp"
